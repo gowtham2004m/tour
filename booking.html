@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Form</title>
+	<link rel="stylesheet" type="text/css" href="css/booking.css">
+
+</head>
+<body>
+	<div class="main">
+		<ul>
+			<ul class="list">
+			<li class="logo"><a href="mainPage.html"><img src="earth-globe.png" alt="Logo" style="width:36px;height:36px"></a></li>
+			<div class="search">
+                <form method="POST" action="info.php">
+                  <input type="text" name="search_p" placeholder="Search.." size="50">
+              
+                  <input type="image" name="submit_p" src="search_icon.png" alt="Search image" style="width:22;height:22; margin-left: 35px;">
+                </form>
+            </div>
+			</ul>
+			<ul class="list2">
+			<li><a href="mainPage.html">Home</a></li>
+			<li><a id="long" href="destination.html">Destination</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="index.html">Logout</a></li>
+			</ul>
+		</ul>
+	</div> 
+	<h1>Tour Booking</h1>
+	<div class="container">
+		<form method="POST" action="/booking">
+			<div class="textbox">
+				<input type="text" placeholder="First Name" name="ffirst" value="" required>  
+			</div>
+
+			<div class="textbox">
+				<input type="text" placeholder="Last Name" name="flast" value="" required> 
+			</div>
+
+			<div class="textbox">
+				<input type="text" placeholder="Email" name="femail" value="" required>
+			</div>
+
+			<div class="textbox">
+				<input type="text" placeholder="City" name="city" value="" required>
+			</div>
+
+			<div class="textbox">
+				<input class="form-select form-control" type="text" placeholder="Phone" name="fphone" value="" required>
+			</div>
+
+			<div class="textbox">
+		        <select id="fdesti" name="fdesti" class="form-select form-control" required>
+					<option value="destination1">Select</option>
+					<option value="destination1">Kerala</option>
+					<option value="destination2">Goa</option>
+					<option value="destination3">Mysore</option>
+					<option value="destination3">Agra</option>
+					<option value="destination3">Indian Gate</option>
+					<option value="destination3">Hampi</option>
+					<option value="destination3">Rajasthan</option>
+					<option value="destination3">Jog Falls</option>
+					<option value="destination3">Srinagar</option>
+					<option value="destination3">Amritsar</option>
+					<option value="destination3">Ladhak</option>
+					<option value="destination3">Manali</option>
+				</select>
+			</div>
+
+			<style>
+				.textbox {
+					margin-bottom: 10px; /* Adjust the spacing between the input fields */
+				}
+			
+				.textbox select {
+					width: 50%; /* Make the select box take up the full width of its container */
+					padding: 5px; /* Adjust padding to match the phone input box */
+					border: 2px solid #121111; /* Add a border to the select box */
+					border-radius: 5px; /* Add rounded corners */
+					font-size: 18px; /* Adjust the font size */
+					height: 35px;
+					background-color: rgba(250, 185, 44, 0.4);
+					color: white;
+					border-width: 2;
+				}
+			
+				.selected {
+					background-color: white !important;
+					color: black !important;
+				}
+			</style>
+			
+
+
+			<script>
+    const selectElement = document.getElementById('fdesti');
+
+    selectElement.addEventListener('change', function() {
+        if (this.value !== 'Select') {
+            this.classList.add('selected');
+        } else {
+            this.classList.remove('selected');
+        }
+    });
+</script>
+			
+			<div class="btn">
+				<input name="submit" value="Submit" type="submit">
+			</div>
+		</form>
+	</div>
+	</div>
+
+</body>
+</html>

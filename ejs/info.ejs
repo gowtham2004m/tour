@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/info.css">
+	<title>Information</title>
+</head>
+<body>
+	<div class="main">
+	    <ul>
+	      <ul class="list">
+	        <li class="logo"><a href="mainPage.html"><img src="earth-globe.png" alt="Logo" style="width:36px;height:36px"></a></li>
+	        <div class="search">
+                <form method="POST" action="info.php">
+                  <input type="text" name="search_p" placeholder="Search.." size="50">
+              
+                  <input type="image" name="submit_p" src="search_icon.png" alt="Search image" style="width:22;height:22; margin-left: 35px;">
+                </form>
+            </div>
+	      </ul>
+	      <ul class="list2">
+	        <li><a href="mainPage.html">Home</a></li>
+	        <li><a id="long" href="destination.html">Destination</a></li>
+	        <li><a href="gallery.html">Gallery</a></li>
+			<li><a href="feedback.html">Feedback</a></li>
+			<li><a href="index.html">Logout</a></li>
+	      </ul>
+	    </ul>
+	</div>
+	<div class="hedder">
+		<h1>Place Information</h1>
+	</div>
+	<div class="container">
+		<div class="description-container" style="border: 1px solid black;">
+			<div class="box1">
+				<% result.forEach( ans =>{ %>
+				<img src="<%= ans.pi_main %>" alt="Taj Mahal Image" style="width: auto;height: 302px;">
+			</div>
+			<div class="description">
+				<h1><%= ans.pname %><h1>
+				<p style="text-align: justify;"><%= ans.pdescription %></p>
+				<p style="color:red; top: -10px;" >Package: <%= ans.package %> Rs</p>
+			</div>
+			<a href="booking.html" style="top: -20px; float: right; margin-right: 27%;">Book Tour</a>
+		</div>
+		<div class="image-container" style="border: 1px solid black">
+			<div class="box">
+		        <div class="imgBox">
+		          <img src="<%= ans.pi1 %>" alt="Taj Mahal Image" style="width: auto;height: 270px;">
+		        </div>
+	        </div>
+	      <div class="box">
+	        <div class="imgBox">
+	          <img src="<%= ans.pi2 %>" alt="Taj Mahal Image" style="width: auto;height: 270px;">
+	        </div>
+	      </div>
+	      <div class="box">
+	        <div class="imgBox">
+	          <img src="<%= ans.pi3 %>" alt="Taj Mahal Image" style="width: auto;height: 270px;">
+	        </div>
+	        	<% }); %>
+	      </div>
+		</div>
+	</div>
+</body>
+</html>

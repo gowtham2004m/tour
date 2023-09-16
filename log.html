@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Management System</title>
+  <style>
+     .jumbotron-video {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      color: #fff;
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: flex-end; 
+      height: 100vh;}
+
+    .jumbotron-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      /* justify-content: flex-end; */
+      background-color:transparent;
+      color: #fff;
+    }
+    .blinking-button {
+      animation: blink 1s infinite; /* Apply blink animation */
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0; /* Set opacity to 0 at 50% of the animation */
+      }
+    }
+
+  </style>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="display: flex;flex-direction: column;min-height: 100vh;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+
+    <!--  <a class="navbar-brand" href="#">TravelMS</a> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+       
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- <div class="container" style="flex: 1;"> -->
+    <div class="jumbotron-video">
+      <video autoplay loop muted style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="vid.mp4" type="video/mp4">
+      </video>
+      
+      <div class="jumbotron-content">
+        <h1 class="display-4">Your Next Adventure Awaits</h1>
+        <p class="lead">Plan your dream vacation with us!</p>
+        <a href="index.html" class="btn btn-primary btn-lg blinking-button">Get Started</a>
+      </div>
+    </div>
+
+    
+</div>
+
+
+  <footer class="bg-dark text-light text-center py-3" style="padding: 10px 0;">
+  <p>&copy; 2023 TravelMS. All rights reserved.</p>
+</footer>
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

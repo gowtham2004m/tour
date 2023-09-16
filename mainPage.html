@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style type="text/css">
+        /* Your custom styles here */
+    </style>
+    <script>
+        // Check if the URL contains a parameter indicating successful data insertion
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('inserted') === 'true') {
+          alert('Ticket Booked successfully!');
+        }
+      </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- <a class="navbar-brand" href="mainPage.html"><img src="earth-globe.png" alt="Logo" style="width:36px;height:36px"></a> -->
+        <form class="form-inline ml-auto" method="POST" action="http://localhost:3000/info">
+          <input class="form-control mr-sm-2" type="text" name="city" placeholder="Search.." size="50">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              <img src="search_icon.png" alt="Search image" style="width:22;height:22;">
+          </button>
+      </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="mainPage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="destination.html">Destination</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://localhost:3000/displayData">Display Data</a> 
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Logout</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+    <div class=" text-center text-white pt-5 pb-5 animated-jumbotron" style="background-color: #fffefe31;">
+      <h1 class="display-3" style="color: #87ccec;">Tourism Management System</h1>
+    </div>
+    
+  <style type="text/css">
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animated-jumbotron {
+  animation: fadeInScale 2s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+    .fade-in-animation {
+        animation: fadeInAnimation 1.5s ease-in-out;
+    }
+    
+</style>
+
+<div class="quote-container"> 
+  <p id = "gfg">"Adventure awaits, go find it."</p>
+        <p id = "geeks">"Travel far and wide, explore new horizons."</p>
+        <p id = "geeks1">"Wander often, wonder always."</p>
+       
+</div>
+ 
+<style>
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background-color: #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+      #gfg {
+            animation-name: text;
+            animation-duration: 1s;
+            animation-iteration-count:inherit;
+        }
+ 
+        #geek1 {
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: #090;
+            padding-bottom: 5px;
+        }
+ 
+        #geek2 {
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+        }
+ 
+        @keyframes text {
+            from {
+                margin-top: 400px;
+            }
+ 
+            to {
+                margin-top: 0px;
+            }
+        }
+
+@keyframes color {
+            0% {
+                background-color: red;
+            }
+ 
+            50% {
+                background-color: orange;
+            }
+ 
+            100% {
+                background-color: brown;
+            }
+        }
+.quote-container p {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.quote-container p:first-child {
+  margin-top: 0;
+}
+
+.quote-container p:last-child {
+  margin-bottom: 0;
+}
+
+</style>
+        
+
+<div class="container mt-4">
+  <div class="row">
+      <div class="col-md-3 mb-3">
+          <div class="card d-flex flex-column h-100">
+              <img src="images//destination//kerala1.jpg" class="card-img-top" alt="Kerala Image">
+              <div class="card-body flex-fill">
+                  <h5 class="card-title">Kerala</h5>
+                  <a href="destination.html" class="btn btn-primary">Visit</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-3">
+          <div class="card d-flex flex-column h-100">
+              <img src="images//destination//mysore1.jpg" class="card-img-top" alt="Goa Image">
+              <div class="card-body flex-fill">
+                  <h5 class="card-title">Mysore</h5>
+                  <a href="destination.html" class="btn btn-primary">Visit</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-3">
+          <div class="card d-flex flex-column h-100">
+              <img src="images//destination//goa1.jpg" class="card-img-top" alt="Goa Image">
+              <div class="card-body flex-fill">
+                  <h5 class="card-title">Goa</h5>
+                  <a href="destination.html" class="btn btn-primary">Visit</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-3">
+          <div class="card d-flex flex-column h-100">
+              <img src="images//destination//ladakh1.jpg" class="card-img-top" alt="Goa Image">
+              <div class="card-body flex-fill">
+                  <h5 class="card-title">Ladakh</h5>
+                  <a href="destination.html" class="btn btn-primary">Visit</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about text-center">
+                    <h2>About Us</h2>
+                    <footer class="footer">
+                      <div class="social-links">
+                        <a href="https://www.facebook.com/"> <img src="images//logo//facebook.png" alt="Facebook" height="25px" width="25px"> </a>
+                        <a href="https://www.instagram.com/"> <img src="images//logo//instagram.png" alt="Instagram" height="25px" width="25px"> </a>
+                        <a href="https://twitter.com/"> <img src="images//logo//twitter.png" alt="Twitter" height="25px" width="25px"> </a>
+                      </div>
+                      <div class="contact-info">
+                        <p>POSTED BY</p>
+                        <div class="image-container">
+                          <img src="team7.jpeg" alt="Your Image" height="100px" width="100px">
+                        </div>
+                        <p>Contact Information: <a href="mailto:gowtham3032004m@gmail.com">gowtham3032004m@gmail.com</a></p>
+                        <p>Phone Number: <a href="mailto:gowthamm.21cse@kongu.edu">1234567890</a></p>
+                      </div>
+                    </footer>
+                 <style>.footer {
+                  background-color: #f4f4f4;
+                  padding: 20px;
+                  text-align: center;
+                }
+                
+                .social-links {
+                  margin-bottom: 10px;
+                }
+                
+                .social-links a {
+                  margin: 0 10px;
+                  display: inline-block;
+                  transition: transform 0.3s ease-in-out;
+                }
+                
+                .social-links a:hover {
+                  transform: scale(1.2);
+                }
+                
+                .contact-info {
+                  margin-top: 10px;
+                  color: #555;
+                }
+                
+                .contact-info a {
+                  color: #007bff;
+                  text-decoration: none;
+                }
+                
+                .contact-info a:hover {
+                  text-decoration: underline;
+                }
+                </style>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

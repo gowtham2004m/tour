@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Booked Tickets</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Add your custom CSS styles here -->
+    <style>
+        /* Custom CSS styles */
+        body {
+            background-color: #f8f9fa; /* Set a background color */
+        }
+
+        h1 {
+            color: #343a40; /* Change the heading color */
+        }
+
+        /* Style the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        /* Style the "Go back" link */
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Display Booked Tickets</h1>
+    <div class="container mt-4">
+        <!-- Display booked tickets if available -->
+        <% if (data && data.length > 0) { %>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <!-- <th>Email</th> -->
+                <th>City</th>
+                <!-- <th>Phone</th> -->
+                <th>Destination</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% data.forEach(entry => { %>
+                <tr>
+                  <td><%= entry.ffirst %></td>
+                  <td><%= entry.flast %></td>
+                  <!-- <td><%= entry.femail %></td> -->
+                  <td><%= entry.city %></td>
+                  <!-- <td><%= entry.fphone %></td> -->
+                  <td><%= entry.fdesti %></td>
+                  <td><%= entry.amt %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        <% } else { %>
+          <p>No booked tickets available.</p>
+        <% } %>
+    </div>
+    <div class="text-center">
+        <a class="back-link" href="/mainPage.html">Go back to Main Page</a>
+    </div>
+</body>
+</html>
